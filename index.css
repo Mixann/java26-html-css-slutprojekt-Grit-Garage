@@ -6,6 +6,7 @@ html {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     min-height: 100%;
     position: relative;
 }
@@ -87,7 +88,7 @@ main {
     padding: 10px;
 }
 .tjanster a {
-    width: calc(50% - px); /* två länkar per rad */
+    width: calc(50% - 5px); /* två länkar per rad */
 }
 .tjanst-1, .tjanst-2, .tjanst-3, .tjanst-4 {
     display: block;

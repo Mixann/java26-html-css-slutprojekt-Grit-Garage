@@ -17,8 +17,8 @@
     margin: 0 auto; 
     padding: 40px 20px; 
     font-family:  Arial, sans-serif; 
-    color: white; }
-
+    color: white; 
+}
 .kontakt-title { 
     text-align: center; 
     font-size: 40px; 
@@ -29,19 +29,17 @@
     border-bottom: 4px solid #3cff41; 
     color: white;
 }
-
 .kontakt-col { 
     display: grid;
     grid-template-columns: 1fr 1fr;
-     gap: 40px;
-      padding: 25px; 
-      text-align: center; 
-      border: 2px solid #3cff41; 
-      border-radius: 8px; 
-      background-color: #1e1e1e;
-      color: white;
-     }
-
+    gap: 40px;
+    padding: 25px; 
+    text-align: center; 
+    border: 2px solid #3cff41; 
+    border-radius: 8px; 
+    background-color: #1e1e1e;
+    color: white;
+}
 .col-title { 
     font-size: 30px; 
     border-bottom: 2px solid #3cff41; 
@@ -51,20 +49,17 @@
     background: transparent; 
     color: white;
 }
-
 .form-group { 
-    margin-bottom: 15px;
- }
-
+ margin-bottom: 15px;
+}
 .form-group label { 
     display: block; 
     font-size: 16px; 
     font-weight: bold;
-     margin-bottom: 5px; 
-     text-align: left;
-     color: white; 
-    }
-
+    margin-bottom: 5px; 
+    text-align: left;
+    color: white; 
+}
 .form-group input, .form-group textarea { 
     width: 100%; 
     padding: 10px; 
@@ -75,16 +70,14 @@
     background: #2a2a2a;
     color: white;
 }
-
 .form-group textarea { 
     height: 80px; 
-    resize: none; }
-
+    resize: none; 
+}
 .map-link { 
     text-decoration: none; 
     display: block; 
 }
-
 .map-box { 
     width: 99%; 
     height: 250px; 
@@ -97,7 +90,6 @@
     padding: 10px;
     padding-bottom: 15px; 
 }
-
 .map-box img.map-image { 
     width: 100%; 
     height: 100%; 
@@ -105,215 +97,219 @@
     border-radius: 8px;
     object-fit: cover; 
 }
-
 .map-overlay { 
     position: absolute; 
     text-decoration: underline;
-     display: flex; 
-     align-items: center; 
-     justify-content: center; 
-     color: black; 
-     background: #3cff41; 
-     font-weight: bold; 
-     padding: 10px; 
-     font-size: 18px; 
-     transition: 0.3s; 
-    }
-
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: black; 
+    background: #3cff41; 
+    font-weight: bold; 
+    padding: 10px; 
+    font-size: 18px; 
+    transition: 0.3s; 
+}
 .map-box:hover .map-overlay {
-     color: white; 
-     background: black; 
-    }
-
+    color: white; 
+    background: black;   
+}
 .submit-button { 
     width: 44%; 
     height: 60px;
     background: black;
-     color: white; 
-     border: 2px solid #3cff41; 
-     padding: 10px 25px; 
-     border-radius: 5px;
-     font-size: 15px; 
-     font-weight: bold; 
-     cursor: pointer; 
-     position: static; 
-     display: inline-block; 
-     margin: 0; 
-    }
-
+    color: white; 
+    border: 2px solid #3cff41; 
+    padding: 10px 25px; 
+    border-radius: 5px;
+    font-size: 15px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    position: static; 
+    display: inline-block; 
+    margin: 0; 
+}
 .submit-button:hover { 
     background: #3cff41; 
     color: black; 
     transform: scale(1.05); 
 }
-
 .site-footer { 
     position: relative; 
     width: 100%;
-     min-height: 100px; 
-     margin-top: 40px; 
-     padding: 20px; 
-     box-sizing: border-box; 
-     display: flex; 
-     justify-content: space-between; 
-     align-items: center; 
-     color: white; }
-
+    min-height: 100px; 
+    margin-top: 40px; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    color: white; 
+}
 .info-line { 
     display: flex; 
     align-items: center; 
     gap: 2%; 
     font-size: 14px; 
-    margin-bottom: 12px; }
-
+    margin-bottom: 12px; 
+}
 .icon-img { 
     width: 30px; 
     height: 30px; 
     padding: 4px;
     object-fit: cover;
-     border: 1px solid #3cff41; 
-     border-radius: 50%; }
+   border: 2px solid #3cff41; 
+    border-radius: 50%; 
+}
 
-
-
-
-   /* Desktop */
+/* Mobile and tablet */ 
 
 @media (max-width: 700px) {
-
-.main-kontakt { 
-    max-width: 94%;
-     padding: 20px 0; 
-    }
-.kontakt-title { 
-    font-size: 30px; 
-    margin-bottom: 20px; 
-    padding: 10px; 
+.topnav{
+    position: static;
+    transform: none;
+    width: 100%;
+    gap: 3px;
+    margin-top: 10px;
 }
-
-.kontakt-col {
-     grid-template-columns: 1fr; 
-     gap: 30px; 
-     padding: 15px; }
-
-.col-title { 
-    font-size: 24px; 
-}
-
-.map-box { 
-    width: 100%; 
-    height: 220px; 
-}
-
-.info-line { 
-    font-size: 14px; 
-    gap: 10px; 
-}
-
-.submit-button {
-     width: 100%; 
-    } 
-}
-
-/* tablet */
-
-@media (max-width: 700px) {
-
-.main-kontakt { 
-    max-width: 94%;
-     padding: 20px 0; 
-    }
-.kontakt-title { 
-    font-size: 30px; 
-    margin-bottom: 20px; 
-    padding: 10px; 
-}
-
-.kontakt-col {
-     grid-template-columns: 1fr; 
-     gap: 30px; 
-     padding: 15px; }
-
-.col-title { 
-    font-size: 24px; 
-}
-
-.map-box { 
-    width: 100%; 
-    height: 220px; 
-}
-
-.info-line { 
-    font-size: 14px; 
-    gap: 10px; 
-}
-
-.submit-button {
-     width: 100%; 
-    } 
-}
-
-
-/* mobil */
-
-@media (max-width: 600px) {
-
-.topnav a{
-    padding: 10px;
+.topnav a {
     font-size: 15px;
-    
+    padding: 7px;
+    -webkit-text-stroke: 1px black;
+    paint-order: stroke fill;
+}
+.boka-knapp {
+     margin: 0 auto; 
+}
+.sidfot { width: 100%; 
+    box-sizing: border-box; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    gap: 15px; 
+    padding: 20px 10px; 
+}
+.info { 
+    font-size: 14px; 
+}
+.Genvag { 
+    display: flex;
+     justify-content: center; 
+     gap: 5px; 
+}
+.Genvag a { 
+    padding: 6px; 
+    font-size: 14px; 
 }
 .main-kontakt { 
-    max-width: 96%;
- }
-
-.kontakt-title { 
-    font-size: 26px;
- }
-
-.kontakt-col {
-     padding: 12px; 
-    }
-
-.col-title { 
-    font-size: 21px; 
+    width: 100%; 
+    max-width: 700px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    box-sizing: border-box; 
 }
-
+.kontakt-col { 
+    width: 100%; 
+    grid-template-columns: minmax(0, 1fr); 
+    padding: 15px; 
+    gap: 25px; 
+    box-sizing: border-box;  
+}
+.kontakt-col section { 
+    width: 100%; min-width: 0; 
+}
+.submit-button {
+     display: block; 
+     width: 100%; 
+     max-width: 100%; 
+     min-width: 0; 
+     height: auto; 
+     min-height: 50px; 
+     padding: 10px 5px; 
+     font-size: 14px;
+      box-sizing: border-box; 
+      white-space: normal; 
+    }
 .map-box { 
-    height: 190px;
- }
-
-.site-footer {
-     gap: 20px; padding: 20px; 
-    }
-
-.site-footer .info { 
-    font-size: 12px; 
+    width: 100%; 
+    max-width: 100%; 
+    box-sizing: border-box; 
 }
-
-.site-footer .Genvag { 
-    font-size: 12px; 
-    gap: 6px; 
-    padding: 5px;
+.map-overlay { 
+    box-sizing: border-box; 
+    padding: 8px; 
+    font-size: 14px; 
+    text-align: center; 
+    white-space: normal; 
+}
+.info-line { 
+    width: 100%;
+     min-width: 0; 
+    
+    }
+.info-line span { 
+    min-width: 0; 
 } 
 }
 
-</style> 
+  /* Small mobile */ 
+
+@media (max-width: 380px) {
+.topnav {
+    position: static;
+    transform: none;
+    width: 100%;
+    gap: 2px;
+    justify-content: center;
+    margin-top: 10px;
+}
+.topnav a {
+    font-size: 13px;
+    padding: 5px;
+    -webkit-text-stroke-width: 0.7px;
+    -webkit-text-stroke-color: black;
+}
+.Genvag a { 
+    font-size: 12px; 
+    padding: 5px; 
+}
+.main-kontakt { 
+    padding: 15px; 
+}
+.kontakt-col { 
+    padding: 12px; 
+}
+.submit-button {
+     width: 100%; 
+     padding: 10px 3px; 
+     font-size: 13px; 
+    }
+.map-box { 
+    height: 170px; 
+}
+.map-overlay { 
+    padding: 7px; 
+    font-size: 12px; 
+    line-height: 1.4; 
+} 
+}
+
+
+</style>
 </head>
-
 <body>
-<img class="GG" src="GG ikon.png" alt="">
 
+    <img class="GG" src="GG ikon.png" alt="">
 <header class="sidhuvud">
-
-<div class="sidhuvud-topp">
-
-<nav class="topnav"> <a href="index.html">Hem</a> <a href="Tjänster.html">Tjänster</a> <a href="Om Oss.html">Om Oss</a> <a href="Kontakt.html">Kontakta Oss</a> </nav>
-
-<a href="boka.html" class="boka-knapp"> <button>Boka</button> </a>
-
-</div>
-
+    <div class="sidhuvud-topp">
+    <nav class="topnav"> 
+        <a href="index.html">Hem</a> 
+        <a href="Tjänster.html">Tjänster</a> 
+        <a href="Om Oss.html">Om Oss</a> <a href="Kontakt.html">Kontakta Oss</a> 
+    </nav>
+    <a href="boka.html" class="boka-knapp"> <button>Boka</button> </a>
+    </div>
 </header>
     
 
@@ -324,7 +320,6 @@
      <h2 class="col-title">Kontaktformulär</h2>
 
 <form>
-
     <div class="form-group">
     <label for="namn">Namn:</label>
     <input type="text" id="namn" name="namn" placeholder="Ditt namn" required>
@@ -382,9 +377,18 @@
 
 <footer class="sidfot">
 
-<p class="info"> ©Grit Garage <br> Telefon: 0720-334455 <br> Mail: Gritgarage@hotmail.com </p>
-
-<div> <nav class="Genvag"> <a href="index.html">Hem</a> <a href="Tjänster.html">Tjänster</a> <a href="Om Oss.html">Om Oss</a> <a href="Kontakt.html">Kontakta Oss</a> </nav> </div>
+    <p class="info"> ©Grit Garage <br> 
+        Telefon: 0720-334455 <br> 
+        Mail: Gritgarage@hotmail.com 
+    </p>
+    <div> 
+        <nav class="Genvag"> 
+            <a href="index.html">Hem</a> 
+            <a href="Tjänster.html">Tjänster</a> 
+            <a href="Om Oss.html">Om Oss</a> 
+            <a href="Kontakt.html">Kontakta Oss</a> 
+        </nav> 
+    </div>
 
 </footer> 
 </body>

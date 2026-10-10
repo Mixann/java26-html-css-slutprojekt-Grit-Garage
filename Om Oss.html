@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="sv" class="index">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grit Garage - Om Oss</title>
+    <link rel="icon" type="image/x-icon" href="Grit-garage-favicon.png">
+    <link rel="stylesheet" href="index.css">
+</head>
+<style>
+    
+    .page-title{
+    
+    text-align: center; 
+    font-size: 40px;  
+    background: #1e1e1e; 
+    border-radius: 15px; 
+    border-bottom: 4px solid #3cff41; 
+    margin: 120px auto 30px auto;
+    color: white;
+    padding: 15px;
+    padding-left: 18%;
+    padding-right: 18%;
+    position: relative;
+    font-weight: bold;
+   
+}
+    .om-oss-container{
+        max-width: 700px;
+        margin: 0 auto 50px;
+        background: #1e1e1e;
+        border: 2px solid #3cff41;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(60, 255, 65, 0.2);
+        display: flex;
+        gap: 40px;
+        padding: 30px;
+    }
+    .om-oss-container h2{
+        color: #3cff41;
+        border-bottom:2px solid #3cff41;
+        display: inline-block;
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+    }
+    .history{
+        flex: 1;
+        color: #fff;
+        line-height: 1.6;
+    }
+   .history p{
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+   } 
+   .team{
+    flex: 1;
+   }
+   .team-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+   }
+
+   /* Team member card */
+
+.member {
+    background: #151515;
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+.member:hover {
+    border-color: #3cff41;
+    box-shadow: 0, 0, 20px rgba(60, 255, 65, 0.2);
+    transform: translateY(-5px);
+}
+.member summary {
+    list-style: none;
+    cursor: pointer;
+}
+.member summary > img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #3cff41;
+    padding: 3px;
+    transition: 0.3s;
+}
+.member:hover summary > img {
+    box-shadow: 0 0 18px #3cff41;
+}
+.member h3 {
+    color: white;
+    margin: 10px 0 5px;
+    font-size: 16px;
+}
+.member summary span {
+    color: #3cff41;
+    font-size: 13px;
+}
+.click-text {
+    color: #aaa;
+    font-size: 12px;
+    margin: 12px 0 0;
+}
+ .member[open] {
+    grid-column: 1 / -1;
+    border-color: #3cff41;
+    box-shadow: 0 0 20px rgba(60, 255, 65, 0.2);
+}
+
+/* Expanded profile */
+
+.member-info {
+    text-align: left;
+    margin-top: 22px;
+    padding: 22px;
+    background: 0 0 20px rgba(60, 255, 65, 0.2);
+    border: 1px solid #333;
+    border-radius: 12px;
+}
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #3cff41;
+}
+.profile-header img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #3cff41;
+}
+.profile-header h3 {
+    color: #3cff41;
+    font-size: 18px;
+    margin: 0 0 8px;
+}
+.profile-header span {
+    color: #ccc;
+    font-size: 9px;
+}
+.profile-about {
+    color: #ddd;
+    line-height: 1.8;
+    margin: 20px 0;
+}
+.member-info h4 {
+    color: #3cff41;
+    margin: 18px 0 8px;
+}
+.member-info p {
+    color: #ccc;
+    line-height: 1.7;
+}
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 12px 0 20px;
+    align-items: flex-start;
+}
+.skill {
+    /* flex: 1 1 140px; */
+    min-width: 0;
+    background: #242424;
+    border: 1px solid #3cff41;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+.skill:hover {
+    box-shadow: 0 0 10px rgba(60, 255, 65, 0.2);
+}
+.skill summary {
+    color: #3cff41;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    list-style: none;
+}
+.skill summary::after {
+    content: " +";
+}
+.skill[open] summary::after {
+    content: " −";
+}
+.skill-info {
+    padding: 0 12px 12px;
+    border-top: 1px solid #3cff41;
+    animation: skillOpen 0.25s ease;
+}
+.skill-info p {
+    color: #ddd;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+.profile-footer {
+    display: flex;
+    gap: 12px;
+    border-top: 1px solid #3cff41;
+    padding-top: 15px;
+    color: #3cff41;
+    font-size: 14px;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ccc;
+    font-size: 12px;
+}
+.contact-item img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #3cff41;
+}
+.contact-item span {
+    transition: 0.3s;
+}
+.contact-item:hover span {
+    color: #3cff41;
+}
+
+   /* Tablet and desktop */
+   
+ @media (max-width: 700px) {
+.topnav {
+    position: static;
+    transform: none;
+    width: 100%;
+    gap: 3px;
+    justify-content: center;
+}
+.topnav a {
+    padding: 7px;
+    font-size: 15px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+.om-oss-container { 
+    flex-direction: column; 
+    width: calc(100% - 30px); 
+    padding: 20px; 
+    gap: 30px; }
+.team-grid { 
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    gap: 15px; 
+}
+.page-title { 
+    font-size: 20px; 
+   margin: 20px auto ;
+  
+} 
+.sidfot { 
+    flex-direction: column; 
+    text-align: center; 
+}
+.Genvag a { 
+    font-size: 16px; 
+}  
+}
+     /* mobile  */
+
+@media (max-width: 380px) { 
+.topnav {
+    position: static;
+    transform: none;
+    width: 100%;
+    gap: 2px;
+    justify-content: center;
+    margin-top: 10px;
+}
+.topnav a {
+    font-size: 13px;
+    padding: 5px;
+    -webkit-text-stroke-width: 0.7px;
+    -webkit-text-stroke-color: black;
+}
+}
+     
+</style>
+<body>
+    <img class="GG" src="GG ikon.png" alt="">
+<header class="sidhuvud">
+<div class="sidhuvud-topp">
+<nav class="topnav"> 
+    <a href="index.html">Hem</a> 
+    <a href="Tjänster.html">Tjänster</a> 
+    <a href="Om Oss.html">Om Oss</a> 
+    <a href="Kontakt.html">Kontakta Oss</a> 
+</nav>
+   <a href="boka.html" class="boka-knapp"> <button>Boka</button> </a>
+</div>
+</header>
+
+      <div class="page-title">OM OSS</div>
+<main class="om-oss-container"> 
+<div class="history">
+    <h2>Vår Historia</h2>
+    <p>Grit Garage grundades 2025 i Malmö med
+        en tydlig vision - att skapa en verkstad 
+        där kunskap,kvalitet och passion för bilar möts.</p>
+
+    <p>Det började i ett litet garage på Malmö där grundaren,
+        driven av ett genuint intresse för motorteknik och skruvande 
+        efter arbetstid, började hjälpa vänner och lokala bilentusiaster 
+        med allt från service till mer avancerade byggen.</p>
+
+    <p>Idag har vi vuxit till ett välrenommerat team som kombinerar 
+        gedigen hantverksskicklighet med modern diagnostik och teknik. 
+        Vår filosofi är enkel: ärlig arbete, transparent kommunikation 
+        och samma omsorg om din bil som om den vore vår egen.</p>
+</div>
+
+<div class="team">
+        <h2>Vårt Team</h2>
+        <div class="team-grid">
+
+<details class="member">
+    <summary>
+        <img src="images.png" alt="Shoaib Abdullah">
+        <h3>Shoaib Abdullah</h3>
+        <span>Grundare & teknisk chef</span>
+        <p class="click-text">Visa profil +</p>
+   </summary>
+
+     <div class="member-info">
+       <div class="profile-header">
+       <img src="images.png" alt="Shoaib Abdullah">
+       <div>
+            <h3>Shoaib Abdullah</h3>
+            <span style="font-size: 13px;">Grundare & teknisk chef</span>
+            </div>
+        </div> 
+       <p class="profile-about"> Shoaib är grundaren av Grit Garage och har
+            ett stort intresse för bilar, motorteknik
+            och avancerade bilbyggen.</p>
+        <h4>Erfarenhet</h4>
+        <p>Arbetar med bilservice, motorreparationer
+            och teknisk felsökning.</p>  
+        <h4>Specialiteter</h4>
+
+    <div class="skills">
+      <details class="skill">
+         <summary>Motortrimning</summary>
+         <div class="skill-info">
+         <p>Motortrimning handlar om att förbättra
+                motorns prestanda och effektivitet genom
+                rätt inställningar och teknisk kontroll.</p>
+      </div>
+      </details>
+
+      <details class="skill">
+        <summary>Diagnostik</summary>
+      <div class="skill-info">
+        <p>Bildiagnostik används för att hitta fel
+                i bilens elektroniska system och motor
+                med hjälp av moderna diagnosverktyg.</p>
+       </div>
+       </details>
+
+       <details class="skill">
+         <summary>Bilreparationer</summary>
+         <div class="skill-info">
+            <p>Bilreparationer omfattar felsökning,
+                byte av slitna delar och reparation
+                av bilens olika mekaniska komponenter.</p>
+      </div>
+      </details>
+      </div>
+
+      <div class="profile-footer">
+      <div class="contact-item">
+      <img src="address icon.png" alt="Address"><span>Malmö, Sweden</span>  
+     </div>
+
+      <div class="contact-item">
+      <img src="mail icon.png" alt="Email"><span>shoaib@gritgarage.se</span>   
+      </div>
+      </div>
+      </div>
+</details>
+
+<details class="member">
+        <summary>
+        <img src="images1.png" alt="Emma Lindgren">
+        <h3>Emma Lindgren</h3>
+        <span>Verkstadschef</span>
+        <p class="click-text">Visa profil +</p>
+        </summary>
+    <div class="member-info">
+    <div class="profile-header">
+    <img src="images1.png" alt="Emma Lindgren">
+
+    <div>
+    <h3>Emma Lindgren</h3>
+    <span style="font-size: 13px;">Verkstadschef</span>
+    </div>
+    </div>
+    <p class="profile-about">Emma ansvarar för den dagliga verksamheten
+            på Grit Garage. Hon ser till att verkstaden
+            fungerar smidigt och att kunderna får
+            professionell service.</p>
+    <h4>Erfarenhet</h4>
+    <p>Emma arbetar med planering, kundkontakt
+            och organisering av verkstadens dagliga arbete.</p>
+    <h4>Specialiteter</h4>
+    <div class="skills">
+    <details class="skill">
+        <summary>Verkstadsplanering </summary>
+        <div class="skill-info">
+         <p>Verkstadsplanering handlar om att
+                organisera arbetet i verkstaden,
+                planera reparationer och se till att
+                arbetet utförs effektivt och i tid.</p>
+        </div>
+    </details>
+
+    <details class="skill">
+        <summary>Kundservice</summary>
+        <div class="skill-info">
+            <p>Kundservice innebär att hjälpa kunder
+                med bokningar, svara på frågor och
+                ge tydlig information om verkstadens
+                tjänster och reparationer.</p>
+        </div>
+    </details>
+
+    <details class="skill">
+        <summary>Teamledning</summary>
+        <div class="skill-info">
+            <p>Teamledning handlar om att
+                samordna personalen, fördela uppgifter
+                och skapa ett bra samarbete i verkstaden.</p>
+        </div>
+    </details>
+    </div>
+
+    <div class="profile-footer">
+    <div class="contact-item">
+    <img src="address icon.png" alt="Address"><span>Malmö, Sweden</span> 
+    </div>
+
+    <div class="contact-item">
+    <img src="mail icon.png" alt="Email"><span>emma@gritgarage.se</span> 
+    </div>
+    </div>
+    </div>
+</details>
+
+<details class="member">
+    <summary>
+        <img src="images.png" alt="Johan Eriksson">
+        <h3>Johan Eriksson</h3>
+        <span>Expert på bromsar & diagnostik</span>
+        <p class="click-text">Visa profil +</p>
+    </summary>
+    <div class="member-info">
+        <div class="profile-header">
+        <img src="images.png" alt="Johan Eriksson">
+            <div>
+                <h3>Johan Eriksson</h3>
+                <span  style="font-size: 13px;">Expert på bromsar och diagnostik</span>
+            </div>
+        </div>
+        <p class="profile-about"> Johan är specialist på bromssystem och
+            modern bildiagnostik. Han brinner för
+            att hitta tekniska problem och se till
+            att bilar fungerar säkert och effektivt.</p>
+        <h4>Erfarenhet</h4>
+        <p> Johan arbetar med felsökning, bromsservice
+            och tekniska reparationer av olika bilmodeller.</p>
+        <h4>Specialiteter</h4>
+        <div class="skills">
+    <details class="skill">
+        <summary>Bromssystem</summary>
+         <div class="skill-info">
+            <p> Bromssystem är viktiga för bilens
+                säkerhet. Arbetet omfattar kontroll
+                av bromsbelägg, bromsskivor och andra
+                komponenter i bromssystemet.</p>
+        </div>
+    </details>
+    <details class="skill">
+        <summary>Bildiagnostik</summary>
+        <div class="skill-info">
+            <p>Bildiagnostik hjälper till att hitta
+                fel i bilens elektroniska system.
+                Diagnosverktyg används för att läsa
+                felkoder och identifiera problem.</p>
+        </div>
+    </details>
+    <details class="skill">
+        <summary>Felsökning av motor</summary>
+        <div class="skill-info">
+            <p> Motorfelsökning innebär att undersöka
+                motorproblem, analysera symptom och
+                hitta orsaken till att motorn inte
+                fungerar som den ska.</p>
+        </div>
+    </details>
+       </div>
+
+       <div class="profile-footer">
+       <div class="contact-item">
+       <img src="address icon.png" alt="Address"><span>Malmö, Sweden</span>   
+       </div>
+
+    <div class="contact-item">
+    <img src="mail icon.png" alt="Email"><span>johan@gritgarage.se</span>  
+    </div>
+    </div>
+    </div>
+</details>
+       
+
+<details class="member">
+    <summary>
+        <img src="images1.png" alt="Sara Nilsson">
+        <h3>Sara Nilsson</h3>
+        <span>Kundservice & rekonditionering</span>
+        <p class="click-text">Visa profil +</p>
+    </summary>
+    <div class="member-info">
+        <div class="profile-header">
+        <img src="images1.png" alt="Sara Nilsson">
+        <div>
+        <h3>Sara Nilsson</h3>
+        <span  style="font-size: 13px;">Kundservice & rekonditionering</span>
+        </div>
+        </div>
+        <p class="profile-about">Sara arbetar med kundservice och professionell
+            bilvård. Hon brinner för att ge varje kund
+            ett trevligt bemötande och se till att
+            varje bil får en välvårdad finish.</p>
+        <h4>Erfarenhet</h4>
+        <p>Sara arbetar med kundkontakt, bokningar,
+            invändig rengöring och bilens utseende.</p>
+        <h4>Specialiteter</h4>
+        <div class="skills">
+    <details class="skill">
+        <summary>Kundsupport</summary>
+        <div class="skill-info">
+            <p>Kundsupport handlar om att hjälpa
+                kunder med frågor, bokningar och
+                information samt ge ett trevligt
+                och professionellt bemötande.</p>
+        </div>
+    </details>
+
+    <details class="skill">
+        <summary>Bilvård</summary>
+        <div class="skill-info">
+            <p>Bilvård innebär noggrann
+                rengöring och vård av bilens
+                interiör och exteriör för att
+                förbättra bilens utseende.</p>
+        </div>
+    </details>
+
+    <details class="skill">
+        <summary>Invändig rengöring</summary>
+        <div class="skill-info">
+            <p>Invändig rengöring omfattar
+                dammsugning, rengöring av säten,
+                instrumentpanel och andra ytor
+                i bilens kupé.</p>
+        </div>
+    </details>
+    </div>
+
+    <div class="profile-footer">
+    <div class="contact-item">
+        <img src="address icon.png" alt="Address"><span>Malmö, Sweden</span>
+    </div>
+
+    <div class="contact-item">
+    <img src="mail icon.png" alt="Email"><span>sara@gritgarage.se</span> 
+    </div>
+    </div>
+    </div>
+</details>
+</main>
+
+<footer class="sidfot">
+    <p class="info"> ©Grit Garage <br> 
+        Telefon: 0720-334455 <br> 
+        Mail: Gritgarage@hotmail.com 
+    </p>
+
+<div> 
+    <nav class="Genvag">
+         <a href="index.html">Hem</a> 
+         <a href="Tjänster.html">Tjänster</a> 
+         <a href="Om Oss.html">Om Oss</a> 
+         <a href="Kontakt.html">Kontakta Oss</a> 
+        </nav> 
+    </div>
+
+</footer> 
+</body>
+</html>
