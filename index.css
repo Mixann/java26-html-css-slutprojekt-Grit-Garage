@@ -25,6 +25,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row-reverse;    
 }
 .GG {
     display: block;
@@ -39,6 +40,7 @@ body {
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
+    
     transition: background-color 0.2s ease, transform 0.2s ease; 
 }/* raden säger till webbläsaren att animera förändring över 0.2s (ease börjar långsamt så att det känns som en naturlig animering)  */
 
