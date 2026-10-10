@@ -126,6 +126,19 @@ main {
     color: white;
 }
 
-
- 
+@media (max-width: 700px) {
+.topnav {
+    position: static;
+    transform: none;
+    width: 100%;
+    gap: 3px;
+    justify-content: center;
+}
+.topnav a {
+    padding: 8px;
+    font-size: 18px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+}
     

@@ -10,22 +10,21 @@
 </head>
 <style>
     
-    .page-title{
-    
-    text-align: center; 
-    font-size: 40px;  
-    background: #1e1e1e; 
-    border-radius: 15px; 
-    border-bottom: 4px solid #3cff41; 
-    margin: 120px auto 30px auto;
+    .page-title {
+    text-align: center;
+    font-size: 40px;
+    background: #1e1e1e;
+    border-radius: 15px;
+    border-bottom: 4px solid #3cff41;
+    margin: 120px auto 30px;
     color: white;
     padding: 15px;
-    padding-left: 18%;
-    padding-right: 18%;
     position: relative;
     font-weight: bold;
-   
-}
+    width: calc(100% - 30px);
+    max-width: 700px;
+    box-sizing: border-box;
+    }
     .om-oss-container{
         max-width: 700px;
         margin: 0 auto 50px;
@@ -246,10 +245,17 @@
     justify-content: center;
 }
 .topnav a {
-    padding: 7px;
-    font-size: 15px;
+    padding: 8px;
+    font-size: 18px;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
+}
+.page-title{
+    width: calc(100% - 30px);
+    max-width: 700px;
+    font-size: 30px;
+    padding: 15px;
+    margin: 80px auto 25px;
 }
 .om-oss-container { 
     flex-direction: column; 
@@ -260,11 +266,6 @@
     grid-template-columns: repeat(2, minmax(0, 1fr)); 
     gap: 15px; 
 }
-.page-title { 
-    font-size: 20px; 
-   margin: 20px auto ;
-  
-} 
 .sidfot { 
     flex-direction: column; 
     text-align: center; 
@@ -273,25 +274,7 @@
     font-size: 16px; 
 }  
 }
-     /* mobile  */
-
-@media (max-width: 380px) { 
-.topnav {
-    position: static;
-    transform: none;
-    width: 100%;
-    gap: 2px;
-    justify-content: center;
-    margin-top: 10px;
-}
-.topnav a {
-    font-size: 13px;
-    padding: 5px;
-    -webkit-text-stroke-width: 0.7px;
-    -webkit-text-stroke-color: black;
-}
-}
-     
+ 
 </style>
 <body>
     <img class="GG" src="GG ikon.png" alt="">
