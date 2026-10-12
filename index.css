@@ -58,7 +58,7 @@ body { /* la background bilden här i body då den var tvungen att flyttas från
     font-size: 1.2rem;
     font-weight: bold;
     -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     transition-property: color;
     transition-duration: 0.2s;
     transition-timing-function: ease;
