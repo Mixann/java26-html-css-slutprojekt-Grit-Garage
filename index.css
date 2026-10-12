@@ -1,16 +1,12 @@
 * {
     box-sizing: border-box; /* padding räknas in i bredden, så inget sticker ut */
 }
-html {
+body { /* la background bilden här i body då den var tvungen att flyttas från html pga bootstrap */
     background: url(Grit-Garage.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    min-height: 100%;
-    position: relative;
-}
-body {
     margin:0;
     min-height: 100vh;
     display: flex;
@@ -21,12 +17,6 @@ body {
 .sidhuvud {
     padding: 10px;
 }
-.sidhuvud-topp {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row-reverse;    
-}
 .GG {
     display: block;
     width: 90px;
@@ -35,50 +25,55 @@ body {
     border-style: double;
 }
 .boka-knapp {
-    padding: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    padding-bottom: 0.5rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 0.5rem;
     color: black;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    
-    transition: background-color 0.2s ease, transform 0.2s ease; 
-}/* raden säger till webbläsaren att animera förändring över 0.2s (ease börjar långsamt så att det känns som en naturlig animering)  */
-
-.boka-knapp:hover {
-    background-color:#3cff41;
-    transform: scale(1.1);
-}
-button {
-    width: 70px;
-    height: 40px;
-    border-style: solid;
-    border-color: #8a8a8a;
+    background-color: white;
     border-width: 3px;
     border-radius: 5px;
-}
-.topnav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap:15px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%); /* centrerar navbaren till mitten av sidan */
-    margin-top: 10px;
-    font-size: 18px;
-}
-.topnav a{
-    color: #3cff41;
-    padding: 15px;
+    border-style: solid;
+    border-color: #8a8a8a;
     font-weight: bold;
-    font-size: 25px;
-    text-decoration: none; /* tar bort understrykning på länkarna */
-    -webkit-text-stroke-width: 1.5px; /* kontur runt texten på navbar */
-    -webkit-text-stroke-color: black;
+    text-decoration: none;
+    transition-property: background-color, transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+} /* raden säger till webbläsaren att animera förändring över 0.2s (ease börjar långsamt så att det känns som en naturlig animering)  */
+.navbar-toggler {
+    border-width: 2px;
+    border-color: #3cff41;
+    border-style: solid;
 }
-.topnav a:hover {
+.boka-knapp:hover, .boka-knapp:focus-visible {
+    color: black;
+    background-color: #3cff41;
+    transform: scale(1.1);
+}
+.topnav .nav-link {
+    color: #3cff41;
+    font-size: 1.2rem;
+    font-weight: bold;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px;
+    transition-property: color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+}
+.topnav .nav-link:hover, .topnav .nav-link:focus-visible {
     color: white;
+}
+.navbar-collapse {
+    border-radius: 8px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 main {
     flex:1; /* pushar ner footer längst ner på sidan */
@@ -125,20 +120,22 @@ main {
 .Genvag a:hover {
     color: white;
 }
-
-@media (max-width: 700px) {
-.topnav {
-    position: static;
-    transform: none;
-    width: 100%;
-    gap: 3px;
-    justify-content: center;
+@media (min-width: 768px) {
+    .navbar-collapse {
+        background-color: transparent;
+        padding-bottom: 0;
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 0;
+    }
+    .topnav {
+        gap: 15px;
+    }
+    .topnav .nav-link {
+        font-size: 1.5rem;
+    }
+    .boka-knapp {
+        margin-top: 0;
+    }
 }
-.topnav a {
-    padding: 8px;
-    font-size: 18px;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-}
-}
-    
