@@ -47,7 +47,7 @@ body { /* la background bilden här i body då den var tvungen att flyttas från
     border-width: 2px;
     border-color: #3cff41;
     border-style: solid;
-}
+}/* focus-visible är tillgänglighet, tangentbordsanvändare ser alltid vart de är på sidan */
 .boka-knapp:hover, .boka-knapp:focus-visible {
     color: black;
     background-color: #3cff41;
@@ -62,7 +62,7 @@ body { /* la background bilden här i body då den var tvungen att flyttas från
     transition-property: color;
     transition-duration: 0.2s;
     transition-timing-function: ease;
-}
+}/* focus-visible är tillgänglighet, tangentbordsanvändare ser alltid vart de är på sidan */
 .topnav .nav-link:hover, .topnav .nav-link:focus-visible {
     color: white;
 }
@@ -102,14 +102,12 @@ main {
 .info {
     margin:0;
     font-size: 16px;
-    bottom: 5px;
 }
 .Genvag {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap:15px;
-    font-size: 16px;
 }
 .Genvag a{
    color: #3cff41;
