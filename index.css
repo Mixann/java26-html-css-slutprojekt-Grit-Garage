@@ -4,6 +4,14 @@
     --black: black;
     --gray: #8a8a8a;
     --black-transparent: rgba(0, 0, 0, 0.8);
+    --menu-bg: rgba(255, 255, 255, 0.85);
+    --text: black;
+}
+@media (prefers-color-scheme: dark){
+    :root {
+        --text: white;
+        --menu-bg: var(--black-transparent);
+    }
 }
 * {
     box-sizing: border-box; /* padding räknas in i bredden, så inget sticker ut */
