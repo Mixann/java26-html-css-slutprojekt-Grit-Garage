@@ -1,3 +1,10 @@
+:root {
+    --green: #3cff41;
+    --white: white;
+    --black: black;
+    --gray: #8a8a8a;
+    --black-transparent: rgba(0, 0, 0, 0.8);
+}
 * {
     box-sizing: border-box; /* padding räknas in i bredden, så inget sticker ut */
 }
@@ -12,7 +19,7 @@ body { /* la background bilden här i body då den var tvungen att flyttas från
     display: flex;
     flex-direction: column; /* header, main och footer hamnar under varandra */
     font-family: Arial, sans-serif;
-    color: white;
+    color: var(--white)
 }
 .sidhuvud {
     padding: 10px;
@@ -20,7 +27,7 @@ body { /* la background bilden här i body då den var tvungen att flyttas från
 .GG {
     display: block;
     width: 90px;
-    background-color: white;
+    background-color: var(--white);
     border-radius: 10px;
     border-style: double;
 }
@@ -31,12 +38,12 @@ body { /* la background bilden här i body då den var tvungen att flyttas från
     padding-left: 1.25rem;
     padding-right: 1.25rem;
     padding-top: 0.5rem;
-    color: black;
-    background-color: white;
+    color: var(--black);
+    background-color:var(--white);
     border-width: 3px;
     border-radius: 5px;
     border-style: solid;
-    border-color: #8a8a8a;
+    border-color: var(--gray);
     font-weight: bold;
     text-decoration: none;
     transition-property: background-color, transform;
@@ -45,19 +52,19 @@ body { /* la background bilden här i body då den var tvungen att flyttas från
 } /* raden säger till webbläsaren att animera förändring över 0.2s (ease börjar långsamt så att det känns som en naturlig animering)  */
 .navbar-toggler {
     border-width: 2px;
-    border-color: #3cff41;
+    border-color: var(--green);
     border-style: solid;
 }/* focus-visible är tillgänglighet, tangentbordsanvändare ser alltid vart de är på sidan */
 .boka-knapp:hover, .boka-knapp:focus-visible {
-    color: black;
-    background-color: #3cff41;
+    color: var(--black);
+    background-color: var(--green);
     transform: scale(1.1);
 }
 .topnav .nav-link {
-    color: #3cff41;
+    color: var(--green);
     font-size: 1.2rem;
     font-weight: bold;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: var(--black);
     -webkit-text-stroke-width: 1px;
     transition-property: color;
     transition-duration: 0.2s;
@@ -73,7 +80,7 @@ body { /* la background bilden här i body då den var tvungen att flyttas från
     padding-right: 10px;
     padding-top: 10px;
     margin-top: 10px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--black-transparent);
 }
 main {
     flex:1; /* pushar ner footer längst ner på sidan */
@@ -110,17 +117,17 @@ main {
     gap:15px;
 }
 .Genvag a{
-   color: #3cff41;
+   color: var(--green);
     padding: 10px;
     font-weight: bold;
     font-size: 20px;   
 }
 .Genvag a:hover {
-    color: white;
+    color: var(--white);
 }
 @media (min-width: 768px) {
     .navbar-collapse {
-        background-color: transparent;
+        background-color: transparent; /* gör navbarens bakgrundsfärg transparant */
         padding-bottom: 0;
         padding-top: 0;
         padding-left: 0;
