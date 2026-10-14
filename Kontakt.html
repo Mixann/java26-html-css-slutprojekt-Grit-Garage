@@ -169,6 +169,13 @@
     font-size: 14px; 
     margin-bottom: 12px; 
 }
+.info-line a{
+    color: #3cff41;
+    transition: 0.3s;
+}
+.info-line a:hover{
+    text-shadow: 0 0 8px white
+}
  /* Bestämmer storlek och utseende för kontaktikonerna */
 .icon-img { 
     width: 30px; 
@@ -251,8 +258,6 @@ lättare att läsa och använda på små skärmar. */
         justify-content: center;
     }
 }
-
-
 </style>
 
    </head>
@@ -344,12 +349,23 @@ lättare att läsa och använda på små skärmar. */
 
   <div class="info-line">  
     <img class="icon-img" src="telephone icon.png" alt="Telefon" >
-    <span><b>Telefon:</b>0720-334455 </span>
+    <!-- <span><b>Telefon:</b>0720-334455 </span> -->
+     <span>
+    <b>Telefon:</b>
+    <a href="tel:0720334455">0720-334455</a>
+</span>
   </div>
 
   <div class="info-line">  
     <img class="icon-img" src="mail icon.png" alt="E-post">
-    <span><b>Mail:</b>gritgarage@hotmail.com </span></div>
+     <span>
+    <b>E-post:</b>
+    <a href="mailto:gritgarage@hotmail.com">
+        gritgarage@hotmail.com
+    </a>
+</span>
+    </div>
+     
      
   <div class="info-line">  
     <img class="icon-img" src="öppetider icon.jpeg" alt="Öppettider">
