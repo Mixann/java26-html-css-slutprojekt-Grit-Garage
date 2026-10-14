@@ -1,0 +1,84 @@
+<!DOCTYPE html> 
+<html lang="sv"> <head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.tack-container { 
+     min-height: 70vh; 
+     display: flex; 
+     justify-content: center; 
+     align-items: center; 
+     padding: 20px; 
+     box-sizing: border-box; 
+    }
+.tack-box { /* Design för rutan med tackmeddelandet */
+    width: 100%; 
+    max-width: 600px; 
+    padding: 40px 25px; 
+    box-sizing: border-box; 
+    text-align: center; 
+    color: white; 
+    background: #1e1e1e; 
+    border: 2px solid #3cff41; 
+    border-radius: 15px; 
+    box-shadow: 0 0 20px rgba(60, 255, 65, 0.2); 
+}
+.tack-box h1 { 
+    color: #3cff41; 
+    font-size: 32px; 
+    margin-bottom: 20px; 
+}
+.tack-box p { 
+    color: white; 
+    font-size: 16px; 
+    line-height: 1.7; 
+    margin-bottom: 30px; 
+}
+.hem-knapp { /* Design för knappen tillbaka till startsidan */
+    display: inline-block; 
+    padding: 12px 20px; 
+    background: #3cff41; 
+    color: black; 
+    text-decoration: none; 
+    font-weight: bold; 
+    border-radius: 5px; 
+    transition: 0.3s; }
+.hem-knapp:hover { 
+    background: white; 
+    transform: scale(1.03); 
+}
+
+/* Anpassar designen för mindre skärmar */
+@media (max-width: 768px) { 
+.tack-box { padding: 30px 20px; 
+}
+.tack-box h1 { 
+    font-size: 26px; 
+}
+.tack-box p { 
+    font-size: 15px; 
+}
+.hem-knapp { 
+    width: 100%; 
+    box-sizing: border-box; 
+    } 
+    }
+</style>
+
+<title>Tack för ditt meddelande - Grit Garage</title>
+<link rel="stylesheet" href="index.css">
+</head> 
+<body>
+
+<main class="tack-container"> <!-- Huvudområdet som innehåller tackmeddelandet -->
+    <div class="tack-box"> 
+        <h1>Tack för ditt meddelande!</h1>
+
+         <!-- Text som bekräftar att meddelandet har skickats in -->
+<p> Ditt meddelande har skickats in. Vi tackar för att du kontaktar Grit Garage. </p>
+<a href="index.html" class="hem-knapp"> Tillbaka till startsidan </a> 
+</div> 
+</main>
+
+</body> 
+</html>
