@@ -1,0 +1,62 @@
+
+body.dackbyte   { background-image: url(grit-garage-dackbyte.png); }
+body.service    { background-image: url(grit-garage-service.png); }
+body.oljebyte   { background-image: url(grit-garage-oljebyte.png); }
+body.inspektion { background-image: url(grit-garage-inspektion-reparation.png); }
+
+.tjanst-sida {
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+}
+/* Mörk halvtransparent ruta så texten alltid går att läsa över bilden */
+.tjanst-kort {
+    width: 100%;
+    max-width: 800px;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: var(--black-transparent);
+}
+.tjanst-kort h1 {
+    color: var(--green);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.tjanst-kort h2 {   /* Rem ska tydligen användas överallt med text eftersom den anpassas till sidans storlek, så unvik att använda px!! */
+    font-size: 1.4rem;
+    margin-top: 25px;
+    color: var(--green);
+}
+.tjanst-kort ul {
+    padding-left: 1.2rem;
+}
+.tjanst-kort li {
+    margin-bottom: 6px;
+}
+.prisruta {
+    margin-top: 25px;
+    padding: 15px;
+    border: 3px solid var(--green);
+    border-radius: 8px;
+    text-align: center;
+}
+.prisruta .pris {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.prisruta .prisnot {
+    font-size: 0.9rem;
+    color: var(--white);
+}
+
+.tjanst-kort .boka-knapp {   /* försökte centrera knappen men gick inte på både mobil och vanligt läge, AI föreslog detta och det verkar fungera */
+    display: block;
+    width: fit-content;
+    margin: 25px auto 0;
+}
+
+@media (min-width: 768px) {
+    .tjanst-kort { padding: 40px; }
+    .tjanst-kort h1 { font-size: 2.5rem; }
+}
