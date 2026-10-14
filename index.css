@@ -98,7 +98,82 @@ main {
     flex-wrap: wrap;
     gap: 10px;
     padding: 10px;
-    margin-top: 120px;
+    margin-top:0;
+} /* promotion börjar här */
+.promo {
+    max-width: 90%;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    padding: 50px;
+    background-color: var(--black-transparent);
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--green);
+    border-radius: 12px;
+    text-align: center;
+}
+.promo-rubrik {
+    margin-bottom: 10px;
+    margin-top: 0;
+    color: var(--green);
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.promo-text {
+    color: var(--white);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+} 
+.promo-knapp {
+    display: inline-block; 
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+    color: var(--black);
+    background-color: var(--green);
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition-property: background-color, transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+}
+.promo-knapp:hover, .promo-knapp:focus-visible {
+    color: var(--black);
+    background-color: var(--white);
+    transform: scale(1.1);
+}
+.erbjudande {
+    width: 90%;
+    max-width: 800px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: var(--black-transparent);
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--green);
+    border-radius: 12px;
+    text-align: center;
+}
+.erbjudande-rubrik {
+    color: var(--green);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.erbjudande-text {
+    color: var(--white);
+    font-size: 1.2rem;
 }
 .tjanster a {
     width: calc(50% - 5px); /* två länkar per rad */
