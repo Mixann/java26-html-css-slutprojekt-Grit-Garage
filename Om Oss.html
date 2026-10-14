@@ -5,7 +5,7 @@
      <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="Grit-garage-favicon.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3/dist/css/bootstrap.min.css"> <!-- bootstrap länk som tar från internet istället för lokal dator -->
     <link rel="stylesheet" href="index.css">
 
     <title>Grit Garage - Om Oss</title>
@@ -26,7 +26,7 @@
     padding: 15px;
     position: relative;
     font-weight: bold;
-    width: calc(100% - 30px);
+    width: calc(100% - 30px); /* Centrerar rubriken och skapar luft runt den */
     max-width: 700px;
     box-sizing: border-box;
     }
@@ -36,11 +36,12 @@
         background: #1e1e1e;
         border: 2px solid #3cff41;
         border-radius: 15px;
-        box-shadow: 0 0 20px rgba(60, 255, 65, 0.2);
+        box-shadow: 0 0 20px rgba(60, 255, 65, 0.2);  /* Diskret grönt sken runt innehållet */
         display: flex;
         gap: 40px;
         padding: 30px;
     }
+    /* Gemensam stil för rubrikerna i containern */
     .om-oss-container h2{
         color: #3cff41;
         border-bottom:2px solid #3cff41;
@@ -60,6 +61,7 @@
    .team{
     flex: 1;
    }
+   /* Visar två medlemmar per rad */
    .team-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -78,16 +80,16 @@
     overflow: hidden;
     transition: 0.4s ease;
 }
-.member:hover {
+.member:hover { /* Grön markering när användaren håller muspekaren över kortet */
     border-color: #3cff41;
     box-shadow: 0, 0, 20px rgba(60, 255, 65, 0.2);
     transform: translateY(-5px);
 }
-.member summary {
+.member summary {/* Tar bort webbläsarens standardmarkering för details */
     list-style: none;
     cursor: pointer;
 }
-.member summary > img {
+.member summary > img {  /* Profilbild i medlemskortet */
     width: 100px;
     height: 100px;
     object-fit: cover;
@@ -99,21 +101,22 @@
 .member:hover summary > img {
     box-shadow: 0 0 18px #3cff41;
 }
+/* Medlemmens namn */
 .member h3 {
     color: white;
     margin: 10px 0 5px;
     font-size: 16px;
 }
-.member summary span {
+.member summary span { /* Medlemmens yrkesroll */
     color: #3cff41;
     font-size: 13px;
 }
-.click-text {
+.click-text { /* Text som visar att kortet går att öppna */
     color: #aaa;
     font-size: 12px;
     margin: 12px 0 0;
 }
- .member[open] {
+ .member[open] { /* Öppet medlemskort sträcker sig över båda kolumnerna */
     grid-column: 1 / -1;
     border-color: #3cff41;
     box-shadow: 0 0 20px rgba(60, 255, 65, 0.2);
@@ -129,7 +132,7 @@
     border: 1px solid #333;
     border-radius: 12px;
 }
-.profile-header {
+.profile-header { /* Profilens bild, namn och yrkesroll */
     display: flex;
     align-items: center;
     gap: 18px;
@@ -152,12 +155,12 @@
     color: #ccc;
     font-size: 9px;
 }
-.profile-about {
+.profile-about { /* Presentationstext om medarbetaren */
     color: #ddd;
     line-height: 1.8;
     margin: 20px 0;
 }
-.member-info h4 {
+.member-info h4 { /* Underrubriker i den utfällbara profilen */
     color: #3cff41;
     margin: 18px 0 8px;
 }
@@ -172,8 +175,7 @@
     margin: 12px 0 20px;
     align-items: flex-start;
 }
-.skill {
-    /* flex: 1 1 140px; */
+.skill { /* Varje kompetens är en egen utfällbar ruta */
     min-width: 0;
     background: #242424;
     border: 1px solid #3cff41;
@@ -184,7 +186,7 @@
 .skill:hover {
     box-shadow: 0 0 10px rgba(60, 255, 65, 0.2);
 }
-.skill summary {
+.skill summary { /* Klickbar rubrik för kompetensen */
     color: #3cff41;
     padding: 10px;
     cursor: pointer;
@@ -193,16 +195,15 @@
     text-align: center;
     list-style: none;
 }
-.skill summary::after {
+.skill summary::after { /* Plustecken när kompetensen är stängd */
     content: " +";
 }
-.skill[open] summary::after {
+.skill[open] summary::after { /* Minustecken när kompetensen är öppen */
     content: " −";
 }
-.skill-info {
-    padding: 0 12px 12px;
+.skill-info { /* Texten som visas när kompetensen öppnas */
+    padding:  12px;
     border-top: 1px solid #3cff41;
-    animation: skillOpen 0.25s ease;
 }
 .skill-info p {
     color: #ddd;
@@ -218,7 +219,7 @@
     color: #3cff41;
     font-size: 14px;
 }
-.contact-item {
+.contact-item {/* En kontaktuppgift med ikon och text */
     display: flex;
     align-items: center;
     gap: 10px;
@@ -254,7 +255,7 @@
     width: calc(100% - 30px); 
     padding: 20px; 
     gap: 30px; }
-.team-grid { 
+.team-grid { /* Behåller två kort per rad */
     grid-template-columns: repeat(2, minmax(0, 1fr)); 
     gap: 15px; 
 }
@@ -297,7 +298,7 @@
 
       <div class="page-title">OM OSS</div>
 <main class="om-oss-container"> 
-<div class="history">
+<div class="history"> <!-- Presentation av företagets historia -->
     <h2>Vår Historia</h2>
     <p>Grit Garage grundades 2025 i Malmö med
         en tydlig vision - att skapa en verkstad 
@@ -316,17 +317,17 @@
 
 <div class="team">
         <h2>Vårt Team</h2>
-        <div class="team-grid">
+        <div class="team-grid">  <!-- Rutnät som organiserar medarbetarnas profilkort -->
 
 <details class="member">
-    <summary>
+    <summary>   <!-- Klickbar sammanfattning som öppnar profilen -->
         <img src="images.png" alt="Rami Kutaiba Abdulaziz">
         <h3>Rami K.A.</h3>
         <span>Grundare & teknisk chef</span>
         <p class="click-text">Visa profil +</p>
    </summary>
 
-     <div class="member-info">
+     <div class="member-info">  <!-- Information som visas när profilen öppnas -->
        <div class="profile-header">
        <img src="images.png" alt="Rami Kutaiba Abdulaziz">
        <div>
@@ -334,16 +335,17 @@
             <span style="font-size: 13px;">Grundare & teknisk chef</span>
             </div>
         </div> 
+         <!-- Kort presentation av medarbetaren -->
        <p class="profile-about"> Rami är grundaren av Grit Garage och har
             ett stort intresse för bilar, motorteknik
             och avancerade bilbyggen.</p>
-        <h4>Erfarenhet</h4>
+        <h4>Erfarenhet</h4>                 <!-- Beskriver medarbetarens erfarenhet -->
         <p>Arbetar med bilservice, motorreparationer
             och teknisk felsökning.</p>  
         <h4>Specialiteter</h4>
 
     <div class="skills">
-      <details class="skill">
+      <details class="skill">  <!-- Utfällbar beskrivning av en specialitet -->
          <summary>Motortrimning</summary>
          <div class="skill-info">
          <p>Motortrimning handlar om att förbättra
@@ -352,7 +354,7 @@
       </div>
       </details>
 
-      <details class="skill">
+      <details class="skill">    <!-- Utfällbar beskrivning av diagnostik -->
         <summary>Diagnostik</summary>
       <div class="skill-info">
         <p>Bildiagnostik används för att hitta fel
@@ -361,7 +363,7 @@
        </div>
        </details>
 
-       <details class="skill">
+       <details class="skill">   <!-- Utfällbar beskrivning av reparationer -->
          <summary>Bilreparationer</summary>
          <div class="skill-info">
             <p>Bilreparationer omfattar felsökning,
@@ -371,7 +373,7 @@
       </details>
       </div>
 
-      <div class="profile-footer">
+      <div class="profile-footer">   <!-- Kontaktuppgifter och ort -->
       <div class="contact-item">
       <img src="address icon.png" alt="Address"><span>Malmö, Sweden</span>  
      </div>
@@ -382,10 +384,10 @@
       </div>
       </div>
 </details>
-
+                                         
 <details class="member">
         <summary>
-        <img src="images1.png" alt="Emma Lindgren">
+        <img src="images1.png" alt="Faiqa Nisar">
         <h3>Faiqa N.</h3>
         <span>Verkstadschef</span>
         <p class="click-text">Visa profil +</p>
@@ -581,7 +583,7 @@
     </div>
     </div>
     </div>
-</details>
+</details>                      
 </main>
 
 <footer class="sidfot">
@@ -600,6 +602,7 @@
     </div>
 
 </footer> 
+           <!-- Gör så att Bootstraps meny fungerar på små skärmar -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
