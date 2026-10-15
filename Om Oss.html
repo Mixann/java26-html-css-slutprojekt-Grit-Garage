@@ -258,36 +258,43 @@
     grid-template-columns: repeat(2, minmax(0, 1fr)); 
     gap: 15px; 
 }
-.sidfot { 
-    flex-direction: column; 
-    text-align: center; 
-}
-.Genvag a { 
-    font-size: 16px; 
-}  
 }
  
 </style>
 </head>
 <body>
-   <header class="sidhuvud">
+     <header class="sidhuvud">
          <nav class="navbar navbar-expand-md" data-bs-theme="dark" aria-label="Huvudmeny">
-        <div class="container-fluid"> 
+         <!-- bootstrap navbar ovan! normal (horizontellt) från 768px och hamburgarmeny under -->
+        <div class="container-fluid"> <!-- gav den classen container-fluid så den kan samarbeta med bootstraps egna kod -->
             <a class="navbar-brand" href="index.html">
-                <img class="GG" src="GG ikon.png" alt="Grit Garage - till omoss sidan"> 
-            </a> 
+                <img class="GG" src="GG ikon.png" alt="Grit Garage - till startsidan"> <!-- att klicka på logon tar tillbaka till startsida -->
+            </a> <!-- navbar-toggler är bootstraps egna klass för hamburgarmenyn -->
                 <button class="navbar-toggler" type="button" 
                         data-bs-toggle="collapse" data-bs-target="#huvudmeny"
                         aria-controls="huvudmeny" aria-expanded="false"
                         aria-label="Öppna meny">
                     <span class="navbar-toggler-icon"></span>
-                </button> 
+                </button> <!-- gör så hamburgarmeny bara syns i mobilvy -->
+                  <!-- koderna under denna kommentar fälls ihop i mobilvy -->
                 <div class="collapse navbar-collapse" id="huvudmeny">
                     <ul class="navbar-nav mx-auto topnav">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Hem</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Tjänster.html">Tjänster</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Om Oss.html" aria-current="page">Om Oss</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Kontakt.html" >Kontakta Oss</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html" aria-current="page">Hem</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Om Oss.html">Om Oss</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Kontakt.html">Kontakta Oss</a></li>
+                        <ul class="navbar-nav mx-auto topnav">
+    <li class="nav-item"></li>   <!-- Bootstrap hamburgarmeny -->
+
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button"
+           data-bs-toggle="dropdown" aria-expanded="false">Tjänster</a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="dackbyte.html">Däckbyte</a></li>
+            <li><a class="dropdown-item" href="service.html">Service</a></li>
+            <li><a class="dropdown-item" href="oljebyte.html">Oljebyte</a></li>
+            <li><a class="dropdown-item" href="inspektion.html">Inspektion och reparation</a></li>
+        </ul>
+    </li>
                     </ul>
                     <a href="boka.html" class="boka-knapp">Boka</a>
                 </div>
