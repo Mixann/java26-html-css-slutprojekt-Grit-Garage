@@ -14,159 +14,179 @@
    
 <style>
     
-    .page-title {
+   .page-title {
     text-align: center;
     font-size: 40px;
-    background: #1e1e1e;
+    background: var(--black-transparent);
     border-radius: 15px;
-    border-bottom: 4px solid #3cff41;
+    border-bottom: 4px solid var(--green);
     margin: 120px auto 30px;
-    color: white;
+    color: var(--white);
     padding: 15px;
     position: relative;
     font-weight: bold;
-    width: calc(100% - 30px); /* Centrerar rubriken och skapar luft runt den */
+    width: calc(100% - 30px);
     max-width: 700px;
     box-sizing: border-box;
-    }
-    .om-oss-container{
-        max-width: 700px;
-        margin: 0 auto 50px;
-        background: #1e1e1e;
-        border: 2px solid #3cff41;
-        border-radius: 15px;
-        box-shadow: 0 0 20px rgba(60, 255, 65, 0.2);  /* Diskret grönt sken runt innehållet */
-        display: flex;
-        gap: 40px;
-        padding: 30px;
-    }
-    /* Gemensam stil för rubrikerna i containern */
-    .om-oss-container h2{
-        color: #3cff41;
-        border-bottom:2px solid #3cff41;
-        display: inline-block;
-        padding-bottom: 5px;
-        margin-bottom: 20px;
-    }
-    .history{
-        flex: 1;
-        color: #fff;
-        line-height: 1.6;
-    }
-   .history p{
+}
+
+.om-oss-container {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    background: var(--black-transparent);
+    border: 2px solid var(--green);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(60, 255, 65, 0.2);
+    display: flex;
+    gap: 40px;
+    padding: 30px;
+}
+
+/* Gemensam stil för rubrikerna i containern */
+.om-oss-container h2 {
+    color: var(--green);
+    border-bottom: 2px solid var(--green);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.history {
+    flex: 1;
+    color: var(--white);
+    line-height: 1.6;
+}
+
+.history p {
     margin-bottom: 15px;
     font-size: 0.95rem;
-   } 
-   .team{
+}
+
+.team {
     flex: 1;
-   }
-   /* Visar två medlemmar per rad */
-   .team-grid{
+}
+
+/* Visar två medlemmar per rad */
+.team-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-   }
+}
 
-   /* Team member card */
-
+/* Team member card */
 .member {
-    background: #151515;
-    border: 1px solid #333;
+    background: var(--black-transparent);
+    border: 1px solid var(--gray);
     border-radius: 15px;
     padding: 15px;
     text-align: center;
-    color: white;
+    color: var(--white);
     overflow: hidden;
     transition: 0.4s ease;
 }
-.member:hover { /* Grön markering när användaren håller muspekaren över kortet */
-    border-color: #3cff41;
+
+.member:hover {
+    border-color: var(--green);
     box-shadow: 0 0 20px rgba(60, 255, 65, 0.2);
     transform: translateY(-5px);
 }
-.member summary {/* Tar bort webbläsarens standardmarkering för details */
+
+.member summary {
     list-style: none;
     cursor: pointer;
 }
-.member summary > img {  /* Profilbild i medlemskortet */
+
+.member summary > img {
     width: 100px;
     height: 100px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid #3cff41;
+    border: 3px solid var(--green);
     padding: 3px;
     transition: 0.3s;
 }
+
 .member:hover summary > img {
-    box-shadow: 0 0 18px #3cff41;
+    box-shadow: 0 0 18px var(--green);
 }
+
 /* Medlemmens namn */
 .member h3 {
-    color: white;
+    color: var(--white);
     margin: 10px 0 5px;
     font-size: 16px;
 }
-.member summary span { /* Medlemmens yrkesroll */
-    color: #3cff41;
+
+.member summary span {
+    color: var(--green);
     font-size: 13px;
 }
-.click-text { /* Text som visar att kortet går att öppna */
-    color: #aaa;
+
+.click-text {
+    color: var(--gray);
     font-size: 12px;
     margin: 12px 0 0;
 }
- .member[open] { /* Öppet medlemskort sträcker sig över båda kolumnerna */
+
+.member[open] {
     grid-column: 1 / -1;
-    border-color: #3cff41;
+    border-color: var(--green);
     box-shadow: 0 0 20px rgba(60, 255, 65, 0.2);
 }
 
 /* Expanded profile */
-
 .member-info {
     text-align: left;
     margin-top: 22px;
     padding: 22px;
-     background: #151515; 
-    border: 1px solid #333;
+    background: var(--black-transparent);
+    border: 1px solid var(--gray);
     border-radius: 12px;
 }
-.profile-header { /* Profilens bild, namn och yrkesroll */
+
+.profile-header {
     display: flex;
     align-items: center;
     gap: 18px;
     padding-bottom: 18px;
-    border-bottom: 1px solid #3cff41;
+    border-bottom: 1px solid var(--green);
 }
+
 .profile-header img {
     width: 90px;
     height: 90px;
     object-fit: cover;
     border-radius: 50%;
-    border: 2px solid #3cff41;
+    border: 2px solid var(--green);
 }
+
 .profile-header h3 {
-    color: #3cff41;
+    color: var(--green);
     font-size: 18px;
     margin: 0 0 8px;
 }
+
 .profile-header span {
-    color: #ccc;
+    color: var(--gray);
     font-size: 9px;
 }
-.profile-about { /* Presentationstext om medarbetaren */
-    color: #ddd;
+
+.profile-about {
+    color: var(--gray);
     line-height: 1.8;
     margin: 20px 0;
 }
-.member-info h4 { /* Underrubriker i den utfällbara profilen */
-    color: #3cff41;
+
+.member-info h4 {
+    color: var(--green);
     margin: 18px 0 8px;
 }
+
 .member-info p {
-    color: #ccc;
+    color: var(--gray);
     line-height: 1.7;
 }
+
 .skills {
     display: flex;
     flex-wrap: wrap;
@@ -174,19 +194,22 @@
     margin: 12px 0 20px;
     align-items: flex-start;
 }
-.skill { /* Varje kompetens är en egen utfällbar ruta */
+
+.skill {
     min-width: 0;
-    background: #242424;
-    border: 1px solid #3cff41;
+    background: var(--black-transparent);
+    border: 1px solid var(--green);
     border-radius: 10px;
     overflow: hidden;
     transition: box-shadow 0.3s ease;
 }
+
 .skill:hover {
     box-shadow: 0 0 10px rgba(60, 255, 65, 0.2);
 }
-.skill summary { /* Klickbar rubrik för kompetensen */
-    color: #3cff41;
+
+.skill summary {
+    color: var(--green);
     padding: 10px;
     cursor: pointer;
     font-size: 14px;
@@ -194,70 +217,81 @@
     text-align: center;
     list-style: none;
 }
-.skill summary::after { /* Plustecken när kompetensen är stängd */
+
+.skill summary::after {
     content: " +";
 }
-.skill[open] summary::after { /* Minustecken när kompetensen är öppen */
+
+.skill[open] summary::after {
     content: " −";
 }
-.skill-info { /* Texten som visas när kompetensen öppnas */
-    padding:  12px;
-    border-top: 1px solid #3cff41;
+
+.skill-info {
+    padding: 12px;
+    border-top: 1px solid var(--green);
 }
+
 .skill-info p {
-    color: #ddd;
+    color: var(--gray);
     font-size: 12px;
     line-height: 1.6;
     margin-bottom: 0;
 }
+
 .profile-footer {
     display: flex;
     gap: 12px;
-    border-top: 1px solid #3cff41;
+    border-top: 1px solid var(--green);
     padding-top: 15px;
-    color: #3cff41;
+    color: var(--green);
     font-size: 14px;
 }
-.contact-item {/* En kontaktuppgift med ikon och text */
+
+.contact-item {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #ccc;
+    color: var(--gray);
     font-size: 12px;
 }
+
 .contact-item img {
     width: 20px;
     height: 20px;
     object-fit: cover;
     border-radius: 50%;
-    border: 2px solid #3cff41;
+    border: 2px solid var(--green);
 }
+
 .contact-item span {
     transition: 0.3s;
 }
+
 .contact-item:hover span {
-    color: #3cff41;
+    color: var(--green);
 }
 
-   /* Tablet and desktop */
-   
- @media (max-width: 700px) {
-.page-title{
-    width: calc(100% - 30px);
-    max-width: 700px;
-    font-size: 30px;
-    padding: 15px;
-    margin: 80px auto 25px;
-}
-.om-oss-container { 
-    flex-direction: column; 
-    width: calc(100% - 30px); 
-    padding: 20px; 
-    gap: 30px; }
-.team-grid { /* Behåller två kort per rad */
-    grid-template-columns: repeat(2, minmax(0, 1fr)); 
-    gap: 15px; 
-}
+/* Tablet and mobile */
+@media (max-width: 700px) {
+    .page-title {
+        width: calc(100% - 30px);
+        max-width: 700px;
+        font-size: 30px;
+        padding: 15px;
+        margin: 80px auto 25px;
+    }
+
+    .om-oss-container {
+        flex-direction: column;
+        width: calc(100% - 30px);
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
 }
  
 </style>
