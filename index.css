@@ -435,3 +435,47 @@ main {
         gap: 20px;
     }
     }
+@media (max-width: 767px) {
+     .samarbetspartners {
+        width: 98%;
+        padding: 15px 5px;
+    }
+
+    .partners-container {
+        display: flex;
+        flex-direction: row; 
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .partner-box {
+        flex: 1 1 0;
+        min-width: 0;
+        max-width: none;
+        padding: 10px 5px;
+    }
+
+    .partner-logo {
+        height: 55px;
+    }
+
+    .partner-logo img {
+        max-width: 100%;
+        max-height: 45px;
+        border-width: 2px;
+    }
+
+    .partner-box h3 {
+        font-size: 0.8rem;
+    }
+
+    .partner-box p {
+        font-size: 0.7rem;
+        line-height: 1.4;
+    }
+
+    .partner-knapp {
+        padding: 6px 4px;
+        font-size: 0.7rem;
+    }
+}
