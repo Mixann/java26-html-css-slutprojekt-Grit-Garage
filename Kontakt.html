@@ -148,19 +148,6 @@
     color: black;
     transform: scale(1.02);
 }
- /* Bestämmer hur sidfoten placeras och ser ut */
-.site-footer { 
-    position: relative; 
-    width: 100%;
-    min-height: 100px; 
-    margin-top: 40px; 
-    padding: 20px; 
-    box-sizing: border-box; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    color: white; 
-}
  /* Placerar ikonen och kontaktinformationen på samma rad */
 .info-line { 
     display: flex; 
@@ -242,53 +229,44 @@ lättare att läsa och använda på små skärmar. */
         min-width: 0;
         overflow-wrap: anywhere;
     }
-
-    .sidfot {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 15px;
-        padding: 20px 10px;
-        box-sizing: border-box;
-    }
-
-    .Genvag {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
 }
 </style>
 
    </head>
 <body>
-    <header class="sidhuvud">
-
-        <!-- Navigeringsmeny från Bootstrap -->
+     <header class="sidhuvud">
          <nav class="navbar navbar-expand-md" data-bs-theme="dark" aria-label="Huvudmeny">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">  <!-- Logotyp som leder till startsidan -->
-                <img class="GG" src="GG ikon.png" alt="Grit Garage - till Kontakt sidan"> 
-            </a> 
-                 <!-- Knapp som öppnar menyn på små skärmar -->
-                      <button class="navbar-toggler" type="button" 
+         <!-- bootstrap navbar ovan! normal (horizontellt) från 768px och hamburgarmeny under -->
+        <div class="container-fluid"> <!-- gav den classen container-fluid så den kan samarbeta med bootstraps egna kod -->
+            <a class="navbar-brand" href="index.html">
+                <img class="GG" src="GG ikon.png" alt="Grit Garage - till startsidan"> <!-- att klicka på logon tar tillbaka till startsida -->
+            </a> <!-- navbar-toggler är bootstraps egna klass för hamburgarmenyn -->
+                <button class="navbar-toggler" type="button" 
                         data-bs-toggle="collapse" data-bs-target="#huvudmeny"
                         aria-controls="huvudmeny" aria-expanded="false"
                         aria-label="Öppna meny">
                     <span class="navbar-toggler-icon"></span>
-                </button>  
-
-                <div class="collapse navbar-collapse" id="huvudmeny">  <!-- Länkar till webbplatsens olika sidor -->
+                </button> <!-- gör så hamburgarmeny bara syns i mobilvy -->
+                  <!-- koderna under denna kommentar fälls ihop i mobilvy -->
+                <div class="collapse navbar-collapse" id="huvudmeny">
                     <ul class="navbar-nav mx-auto topnav">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Hem</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Tjänster.html">Tjänster</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html" aria-current="page">Hem</a></li>
                         <li class="nav-item"><a class="nav-link" href="Om Oss.html">Om Oss</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Kontakt.html">Kontakta Oss</a></li>
+                        <ul class="navbar-nav mx-auto topnav">
+    <li class="nav-item"></li>   <!-- Bootstrap hamburgarmeny -->
 
-                               <!-- Visar vilken sida besökaren är på -->
-                        <li class="nav-item"><a class="nav-link" href="Kontakt.html" aria-current="page">Kontakta Oss</a></li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button"
+           data-bs-toggle="dropdown" aria-expanded="false">Tjänster</a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="dackbyte.html">Däckbyte</a></li>
+            <li><a class="dropdown-item" href="service.html">Service</a></li>
+            <li><a class="dropdown-item" href="oljebyte.html">Oljebyte</a></li>
+            <li><a class="dropdown-item" href="inspektion.html">Inspektion och reparation</a></li>
+        </ul>
+    </li>
                     </ul>
-
-                          <!-- Knapp som leder till bokningssidan -->
                     <a href="boka.html" class="boka-knapp">Boka</a>
                 </div>
 
