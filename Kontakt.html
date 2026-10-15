@@ -13,126 +13,141 @@
       <meta name="description" content="Kontakta Grit Garage i Malmö för frågor om bilservice, oljebyte, däckbyte och bokning. Ring oss eller skicka ett meddelande!" />
    <style>
 
-.main-kontakt {         /* Bestämmer bredd, avstånd, textstil och färg för huvudinnehållet */
-    max-width: 700px; 
-    margin: 0 auto; 
-    padding: 40px 20px; 
-    font-family:  Arial, sans-serif; 
-    color: white; 
+.main-kontakt {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: var(--white);
 }
-/* Design för rubriken Kontakta Oss */
-.kontakt-title {            
-    text-align: center; 
-    font-size: 40px; 
-    margin-bottom: 30px; 
-    background: #1e1e1e; 
-    padding: 15px; 
-    border-radius: 8px; 
-    border-bottom: 4px solid #3cff41; 
-    color: white;
+
+/* Contact title */
+.kontakt-title {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+    background: var(--black-transparent);
+    padding: 15px;
+    border-radius: 8px;
+    border-bottom: 4px solid var(--green);
+    color: var(--white);
 }
-/* Delar upp innehållet i två kolumner på större skärmar */
-.kontakt-col {                 
+
+/* Two-column layout */
+.kontakt-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    padding: 25px; 
-    text-align: center; 
-    border: 2px solid #3cff41; 
-    border-radius: 8px; 
-    background-color: #1e1e1e;
-    color: white;
-} 
-/* Design för rubrikerna i de två kolumnerna */
-.col-title {                      
-    font-size: 30px; 
-    border-bottom: 2px solid #3cff41; 
-    display: inline-block; 
-    padding-bottom: 5px; 
-    margin-bottom: 20px; 
-    background: transparent; 
-    color: white;
+    padding: 25px;
+    text-align: center;
+    border: 2px solid var(--green);
+    border-radius: 8px;
+    background-color: var(--black-transparent);
+    color: var(--white);
 }
- /* Skapar avstånd mellan fälten i kontaktformuläret */
-.form-group {                            
- margin-bottom: 15px;
+
+/* Column titles */
+.col-title {
+    font-size: 30px;
+    border-bottom: 2px solid var(--green);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    background: transparent;
+    color: var(--white);
 }
-.form-group label {                  /* Gör texten ovanför varje fält tydlig */
-    display: block; 
-    font-size: 16px; 
+
+/* Form spacing */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Form labels */
+.form-group label {
+    display: block;
+    font-size: 16px;
     font-weight: bold;
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
     text-align: left;
-    color: white; 
+    color: var(--white);
 }
-/* Samma design för textrutor och det stora meddelandefältet */
-.form-group input, .form-group textarea {    
-    width: 100%; 
-    padding: 10px; 
-    border: 1px solid #3cff41; 
-    border-radius: 5px; 
-    font-size: 14px; 
-    box-sizing: border-box; 
-    background: #2a2a2a;
-    color: white;
+
+/* Input fields */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--green);
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background: rgba(42, 42, 42, 0.9);
+    color: var(--white);
 }
- /* Bestämmer höjden på fältet där besökaren skriver sitt meddelande */
-.form-group textarea {                    
-    height: 80px; 
-    resize: none; 
+
+/* Message field */
+.form-group textarea {
+    height: 80px;
+    resize: none;
 }
-/* Gör hela kartbilden till en klickbar länk */
-.map-link { 
-    text-decoration: none; 
-    display: block; 
+
+/* Map link */
+.map-link {
+    text-decoration: none;
+    display: block;
 }
- /* Bestämmer storlek och placering för kartan och texten ovanpå */
-.map-box { 
-    width: 99%; 
-    height: 250px; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center;  
-    overflow: hidden; 
-    position: relative; 
+
+/* Map container */
+.map-box {
+    width: 99%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
     cursor: pointer;
     padding: 10px;
-    padding-bottom: 15px; 
+    padding-bottom: 15px;
 }
-/* Anpassar kartbilden och lägger till en grön ram */
-.map-box img.map-image { 
-    width: 100%; 
-    height: 100%; 
-    border: 2px solid #3cff41;
+
+/* Map image */
+.map-box img.map-image {
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--green);
     border-radius: 8px;
-    object-fit: cover; 
+    object-fit: cover;
 }
- /* Visar en grön textruta ovanpå kartbilden */
-.map-overlay { 
-    position: absolute; 
+
+/* Map overlay */
+.map-overlay {
+    position: absolute;
     text-decoration: underline;
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    color: black; 
-    background: #3cff41; 
-    font-weight: bold; 
-    padding: 10px; 
-    font-size: 18px; 
-    transition: 0.3s; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    background: var(--green);
+    font-weight: bold;
+    padding: 10px;
+    font-size: 18px;
+    transition: 0.3s;
 }
- /* Ändrar färgen när besökaren håller musen över kartan */
+
+/* Map hover */
 .map-box:hover .map-overlay {
-    color: white; 
-    background: black;   
+    color: var(--white);
+    background: var(--black);
 }
- /* Design för knappen som skickar kontaktformuläret */
+
+/* Submit button */
 .submit-button {
     width: 100%;
     min-height: 50px;
-    background: black;
-    color: white;
-    border: 2px solid #3cff41;
+    background: var(--black);
+    color: var(--white);
+    border: 2px solid var(--green);
     padding: 12px 15px;
     border-radius: 5px;
     font-size: 15px;
@@ -141,93 +156,64 @@
     display: block;
     margin: 15px auto 0;
     box-sizing: border-box;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
- /* Ändrar knappens färger och storlek vid muspekaren */
-.submit-button:hover {
-    background: #3cff41;
-    color: black;
+
+/* Button hover and keyboard focus */
+.submit-button:hover,
+.submit-button:focus-visible {
+    background: var(--green);
+    color: var(--black);
     transform: scale(1.02);
 }
- /* Placerar ikonen och kontaktinformationen på samma rad */
-.info-line { 
-    display: flex; 
-    align-items: center; 
-    gap: 2%; 
-    font-size: 14px; 
-    margin-bottom: 12px; 
+
+/* Contact information */
+.info-line {
+    display: flex;
+    align-items: center;
+    gap: 2%;
+    font-size: 14px;
+    margin-bottom: 12px;
 }
-.info-line a{
-    color: #3cff41;
+
+.info-line a {
+    color: var(--green);
     transition: 0.3s;
 }
-.info-line a:hover{
-    text-shadow: 0 0 8px white
+
+.info-line a:hover {
+    text-shadow: 0 0 8px var(--white);
 }
- /* Bestämmer storlek och utseende för kontaktikonerna */
-.icon-img { 
-    width: 30px; 
-    height: 30px; 
+
+/* Contact icons */
+.icon-img {
+    width: 30px;
+    height: 30px;
     padding: 4px;
     object-fit: cover;
-   border: 2px solid #3cff41; 
-    border-radius: 50%; 
+    border: 2px solid var(--green);
+    border-radius: 50%;
 }
 
-/* Anpassar sidan för mobil och surfplatta så att innehållet blir 
-lättare att läsa och använda på små skärmar. */
-
-@media (max-width: 768px) {
-    
-    .main-kontakt {
-        width: 100%;
-        padding: 20px 15px;
-        box-sizing: border-box;
-    }
-
+/* Responsive design for mobile */
+@media (max-width: 600px) {
     .kontakt-col {
-        grid-template-columns: minmax(0, 1fr);
-        padding: 15px;
+        grid-template-columns: 1fr;
         gap: 25px;
-        box-sizing: border-box;
+        padding: 15px;
     }
 
     .kontakt-title {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .col-title {
-        font-size: 24px;
-    }
-
-    .form-group input,
-    .form-group textarea {
-        width: 100%;
-        box-sizing: border-box;
-        font-size: 16px;
-    }
-
-    .submit-button {
-        width: 100%;
-        height: auto;
-        min-height: 50px;
-        box-sizing: border-box;
+        font-size: 25px;
     }
 
     .map-box {
-        width: 100%;
-        padding: 15px;
+        max-width: 100%;
         box-sizing: border-box;
-    
-    }
-
-    .info-line {
-        gap: 10px;
-        align-items: flex-start;
-    }
-
-    .info-line span {
-        min-width: 0;
-        overflow-wrap: anywhere;
     }
 }
 </style>

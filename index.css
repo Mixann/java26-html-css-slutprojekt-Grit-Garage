@@ -217,6 +217,135 @@ main {
     object-fit: cover;
     border-radius: 8px;
 }
+/* Samarbetspartners */
+.samarbetspartners {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    background-color: var(--black-transparent);
+    color: var(--white);
+    border: 2px solid var(--green);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.partners-inner {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.samarbetspartners h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--green);
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.partners-text {
+    color: var(--white);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Partnerkorten */
+.partners-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.partner-box {
+    display: flex;
+    flex: 1 1 220px;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    padding: 25px 20px;
+    background-color: rgba(0, 0, 0, 0.65);
+    border: 2px solid var(--green);
+    border-radius: 10px;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease,
+                background-color 0.2s ease;
+}
+
+/* Hovereffekt */
+.partner-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(60, 255, 65, 0.35);
+    background-color: rgba(20, 30, 20, 0.95);
+}
+
+/* Logotyp */
+.partner-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.partner-logo img {
+    display: block;
+    max-width: 100%;
+    max-height: 90px;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 4px solid var(--green);
+}
+
+/* Partnernamn */
+.partner-box h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: var(--green);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* Beskrivning */
+.partner-box p {
+    flex-grow: 1;
+    color: var(--white);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Läs mer-knapp */
+.partner-knapp {
+    display: inline-block;
+    padding: 10px 22px;
+    color: var(--black);
+    background-color: var(--green);
+    border: 2px solid var(--green);
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.partner-knapp:hover,
+.partner-knapp:focus-visible {
+    color: var(--white);
+    background-color: transparent;
+    transform: scale(1.05);
+}
+
+/* Avslutande text */
+.partners-avslutning {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: var(--green);
+    font-weight: bold;
+}
 .sidfot {
     display: flex;
     flex-direction: column; /* info och genvägar under varandra på mobil */
@@ -260,6 +389,7 @@ main {
     .boka-knapp {
         margin-top: 0;
     }
+
 }
 
 
