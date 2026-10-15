@@ -358,3 +358,20 @@ main {
     }
 
 }
+
+
+.tjanster a {          /* hover effekt på bilderna */
+    display: block;
+    overflow: hidden;          
+    border-radius: 8px;
+}
+.tjanster a img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.tjanster a:hover img,
+    .tjanster a:focus-visible img {    /* storlek och lite brightness på bilderna */
+        transform: scale(1.05);
+        filter: brightness(1.3);
+    
+    }
