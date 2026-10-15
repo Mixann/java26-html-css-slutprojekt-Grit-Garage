@@ -58,6 +58,39 @@ body { /* la background bilden här i body då den var tvungen att flyttas från
     transition-duration: 0.2s;
     transition-timing-function: ease;
 } /* raden säger till webbläsaren att animera förändring över 0.2s (ease börjar långsamt så att det känns som en naturlig animering)  */
+.boka-wrapper {
+  text-align: center;
+  margin-top: 30px;
+}
+.boka-nu {
+  display: inline-block;
+
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 36px;
+  padding-right: 36px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--black);
+  background-color: var(--white);
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--gray);
+  border-radius: 6px;
+}
+.boka-nu:hover {
+  background-color: var(--green);
+  color: var(--black);
+  text-shadow: none;
+}
+.boka-stor {
+  font-size: 1.3rem;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 36px;
+  padding-right: 36px;
+}
 .navbar-toggler {
     border-width: 2px;
     border-color: var(--green);
