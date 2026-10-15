@@ -6,6 +6,7 @@
     --black-transparent: rgba(0, 0, 0, 0.8);
     --menu-bg: rgba(255, 255, 255, 0.85);
     --text: black;
+    --space: 1.25rem;
 }
 @media (prefers-color-scheme: dark){
     :root {
@@ -43,8 +44,8 @@ body { /* la background bilden här i body då den var tvungen att flyttas från
     display: inline-block;
     margin-top: 10px;
     padding-bottom: 0.5rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding-left: var(--space);
+    padding-right: var(--space);
     padding-top: 0.5rem;
     color: var(--black);
     background-color:var(--white);
