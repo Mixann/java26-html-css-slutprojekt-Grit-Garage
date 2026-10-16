@@ -18,7 +18,7 @@
     box-sizing: border-box; /* padding räknas in i bredden, så inget sticker ut */
 }
 body { /* la background bilden här i body då den var tvungen att flyttas från html pga bootstrap */
-    background: url(Grit-Garage.jpg);
+    background: url(boka&konfirmation.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -362,7 +362,6 @@ main {
     background-color: transparent;
     transform: scale(1.05);
 }
-
 /* Avslutande text */
 .partners-avslutning {
     margin-top: 30px;
@@ -372,7 +371,7 @@ main {
 }
 .sidfot {
     display: flex;
-    flex-direction: column; /* info och genvägar under varandra på mobil */
+    flex-direction: column;
     gap:10px;
     padding:15px;
 }

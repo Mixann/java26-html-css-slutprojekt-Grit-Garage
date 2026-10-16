@@ -1,0 +1,50 @@
+
+body.priser {
+  background-image: url(boka&konfirmation.png);
+}
+
+.ruta {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 16px 24px;
+  background-color: var(--black-transparent);
+  border: 2px solid var(--green);
+  border-radius: 12px;
+  text-align: center;
+}
+.ruta h2 {
+  font-size: 2rem;
+  margin: 8px 0 16px;
+}
+
+/* Tabellen */
+.pristabell {
+  width: 100%;
+  border-collapse: collapse;
+}
+.pristabell th, .pristabell td {
+  padding: 12px 8px;
+  text-align: center;
+}
+/* Rubrikraden */
+.pristabell th {
+  color: var(--green);
+  border-bottom: 2px solid var(--green);
+}
+.pristabell td {
+  border-bottom: 1px solid #333333;
+}
+.pris {
+  color: var(--green);
+  font-weight: bold;
+}
+
+.liten-text {
+  font-size: 0.9rem;
+  color: #cccccc;
+  margin-top: 16px;
+}
+.knapp-wrapper {
+  text-align: center;
+  margin-bottom: 40px;
+}
