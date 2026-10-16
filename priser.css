@@ -2,7 +2,6 @@
 body.priser {
   background-image: url(boka&konfirmation.png);
 }
-
 .ruta {
   max-width: 500px;
   margin: 40px auto;
@@ -16,7 +15,6 @@ body.priser {
   font-size: 2rem;
   margin: 8px 0 16px;
 }
-
 /* Tabellen */
 .pristabell {
   width: 100%;
@@ -38,7 +36,6 @@ body.priser {
   color: var(--green);
   font-weight: bold;
 }
-
 .liten-text {
   font-size: 0.9rem;
   color: #cccccc;
